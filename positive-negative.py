@@ -31,21 +31,20 @@ with open('input_file.txt','r+') as inputfile:
 				i+=1
 				if(char=='.'or char==','or char=='!' or char=='?'):
 					flag=1
-					#print char
-					#print word
+				
 					new_word=word[:i-1]
 					new_word=''.join(new_word)
-					word=''.join(word)
-					#print new_word
+				
+				
 					new_word_arr.append(new_word)
 					new_word_arr.append(char)
-					del word_arr[word_arr.index(word)]
+					
 				if(i==word_len and flag==0):
 					new_word_arr.append(''.join(word))
 
 		#print "punctuation separation done for a line"
 		word_arr=new_word_arr
-		#print "word_arr=%s" % word_arr			
+				
 for word in word_arr:	
 			if('not' in word_arr[-3]):
 				if(word in pos_list):
