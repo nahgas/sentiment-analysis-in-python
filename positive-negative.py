@@ -5,12 +5,12 @@ with open('positive_words.txt','r+') as pos_words_file:
 	
 	for word in pos_words_file:
 		word=word.lower()	#convert adjectives to lower case 
-		pos_list.append(word[:len(word)-1])	#remove '/n'	
+		pos_list.append(word[:len(word)-1])	#remove '\n'	
 	
 with open('negative_words.txt','r+') as neg_words_file:
 	for word in neg_words_file:
 		word=word.lower() 	#convert adjectives to lower case 
-		neg_list.append(word[:len(word)-1])		#remove '/n'	
+		neg_list.append(word[:len(word)-1])		#remove '\n'	
 #print neg_list
 #print pos_list
 
